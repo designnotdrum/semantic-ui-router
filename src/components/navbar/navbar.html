@@ -1,13 +1,20 @@
-<nav class="navbar" ng-controller="NavbarCtrl">
-    <a href="https://github.com/Swiip/generator-gulp-angular">Whatever</a>
-
-    <ul>
+<nav class="ui secondary pointing blue inverted menu" ng-controller="NavbarCtrl">
+    <a ui-sref="/">{{title}}</a>
+    <a ui-sref="/" class="active item">      
+      <i class="home icon"></i> Home
+    </a>
+    <div class="right menu">
+      <a ui-sref="login" class="item" data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='icon'></i><i class='icon'></i></div></div>">
+        <i class="sign in icon"></i> Sign in
+      </a>
+    </div>
+    <!--ul>
       <li class="active"><a ng-href="#">Home</a></li>
       <li><a ng-href="#">About</a></li>
       <li><a ng-href="#">Contact</a></li>
     </ul>
 
-    <ul>
-      <li><a ng-href="#">Current date: {{ date | date:'yyyy-MM-dd' }}</a></li>
-    </ul>
+    <ul class="pull-right">
+      <li><a ui-sref="login">Login</a></li>
+    </ul-->
   </nav>

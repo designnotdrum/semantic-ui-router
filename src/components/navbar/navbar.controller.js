@@ -2,5 +2,5 @@
 
 angular.module('angularUiRouter')
   .controller('NavbarCtrl', function ($scope) {
-    $scope.date = new Date();
+    $scope.title = 'Mashup';
   });

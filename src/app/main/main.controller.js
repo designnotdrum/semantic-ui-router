@@ -42,25 +42,32 @@ angular.module('angularUiRouter')
         'key': 'protractor',
         'title': 'Protractor',
         'url': 'https://github.com/angular/protractor',
-        'description': 'End to end test framework for AngularJS applications built on top of WebDriverJS.',
+        'description': 'End to end test framework for AngularJS.',
         'logo': 'protractor.png'
       },
       {
         'key': 'jquery',
         'title': 'jQuery',
         'url': 'http://jquery.com/',
-        'description': 'jQuery is a fast, small, and feature-rich JavaScript library.',
+        'description': 'jQuery is a feature-rich JavaScript library.',
         'logo': 'jquery.jpg'
       },
       {
         'key': 'less',
         'title': 'Less',
         'url': 'http://lesscss.org/',
-        'description': 'Less extends the CSS language, adding features that allow variables, mixins, functions and many other techniques.',
+        'description': 'Less extends the CSS language.',
         'logo': 'less.png'
+      },
+      {
+        'key': 'semanticui',
+        'title': 'Semantic UI',
+        'url': 'http://semantic-ui.com',
+        'description': 'User Interface is the vocabulary of the web.',
+        'logo': 'semanticui.png'
       }
     ];
-    angular.forEach($scope.awesomeThings, function(awesomeThing) {
+    angular.forEach($scope.awesomeThings, function (awesomeThing) {
       awesomeThing.rank = Math.random();
     });
   });
