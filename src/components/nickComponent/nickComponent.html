@@ -1,31 +1,31 @@
-<div class="ui segment">
-  <div class="ui two column middle aligned relaxed fitted stackable grid">
-    <div class="column">
-      <div class="ui form segment">
-        <div class="field">
-          <label>Username</label>
-          <div class="ui left icon input">
-            <input type="text" placeholder="Username">
-            <i class="user icon"></i>
-          </div>
-        </div>
-        <div class="field">
-          <label>Password</label>
-          <div class="ui left icon input">
-            <input type="password">
-            <i class="lock icon"></i>
-          </div>
-        </div>
-        <div class="ui blue submit button">Login</div>
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container">
+
+  
+
+  <div id="players" class="ui celled striped three column green sortable table" ng-grid="gridOptions"></div>
+  <div class="ui cards">
+    <div class="card" ng-repeat="mySelection in mySelections">
+      <div class="image">
+        <!--img ng-if="mySelection.team == 'East' " src="http://placehold.it/290x290/ff0000/ffffff&text=EAST" alt="{{mySelection.name}} - {{mySelection.team}}" width="290" height="290">
+        <img ng-if="mySelection.team == 'West' " src="http://placehold.it/290x290/0000ff/ffffff&text=WEST" alt="{{mySelection.name}} - {{mySelection.team}}" width="290" height="290"-->
+        <img ng-if="mySelection.photo !== null " src="{{mySelection.photo}}" alt="{{mySelection.name}} - {{mySelection.team}}" width="290" height="290">
       </div>
-    </div>
-    <div class="ui vertical divider">
-      Or
-    </div>
-    <div class="center aligned column">
-      <div class="huge green ui labeled icon button">
-        <i class="signup icon"></i>
-        Sign Up
+      <div class="content">
+        <div class="header">{{mySelection.name}}</div>
+        <div class="meta">
+          <span class="date">Age: {{mySelection.age}}</span>
+        </div>
+        <div class="description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias totam quia maiores hic omnis, quam voluptate aspernatur ipsa ut quaerat fuga ea nemo magnam sunt, amet mollitia recusandae unde? Illum.
+        </div>
+      </div>
+      <div class="extra content">
+        <a>
+          <i class="trophy icon"></i>
+          {{mySelection.team}}
+        </a>
       </div>
     </div>
   </div>

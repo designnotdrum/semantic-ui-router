@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularUiRouter', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router'])
+angular.module('angularUiRouter', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ngGrid'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
@@ -12,6 +12,11 @@ angular.module('angularUiRouter', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanit
       	url: '/',
       	templateUrl: 'app/main/main.html',
       	controller: 'MainCtrl'
+      })
+      .state('football', {
+        url: '/football',
+        templateUrl: 'components/nickComponent/nickComponent.html',
+        controller: 'NickComponentCtrl'
       })
       .state('login', {
       	url: '/login',
